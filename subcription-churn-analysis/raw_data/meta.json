@@ -1,0 +1,26 @@
+{
+  "generated_at": "2026-01-30T12:46:05Z",
+  "seed": 42,
+  "observation_start": "2025-07-04",
+  "observation_end": "2026-01-30",
+  "rows": {
+    "plans": 3,
+    "users": 2500,
+    "subscriptions": 2510,
+    "payments": 10200,
+    "usage_daily": 344932,
+    "campaign_touchpoints": 5248
+  },
+  "known_data_issues_intentionally_included": [
+    "users: ~1% missing preferred_device",
+    "subscriptions: ~0.4% duplicated rows",
+    "payments: ~1% inconsistent casing in payment_status + ~0.3% duplicated rows",
+    "usage_daily: ~1% missing rows (dropped) + ~0.2% duplicated rows + ~0.15% minutes outliers",
+    "campaign_touchpoints: ~1% inconsistent casing in channel + ~0.5% missing campaign_type + ~0.3% duplicated rows"
+  ],
+  "notes": [
+    "Churn is represented via subscriptions.status in {active, cancelled, expired} and subscriptions.end_date.",
+    "Expired subscriptions have a forced final FAILED payment.",
+    "Usage tends to decline during the last ~21 days before churn effective end_date."
+  ]
+}

@@ -1,0 +1,4 @@
+plan_id,plan_name,billing_cycle_days,price,tier
+PLN_BASIC,Basic,30,299.0,low
+PLN_STD,Standard,30,499.0,mid
+PLN_PREM,Premium,30,799.0,high
